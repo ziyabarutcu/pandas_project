@@ -7,9 +7,13 @@ class MaviYaka(Calisan):
         self.__zam_orani=0
     def get_yipranma_payi(self):
         return self.__yipranma_payi
+    def set_yipranma_payi(self,new_yipranma_payi):
+        self.__yipranma_payi = new_yipranma_payi
 
     def get_zam_orani(self):
         return self.__zam_orani
+    def set_zam_orani(self,new_zam_orani):
+        self.__zam_orani = new_zam_orani
 
     def get_yeni_maas(self):
         self.__yeni_maas = self.get_maas() * self.zam_hakki()
