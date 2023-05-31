@@ -9,9 +9,13 @@ class BeyazYaka(Calisan):
 
     def get_tesfik_primi(self):
         return self.__tesfik_primi
+    def set_tesfik_primi(self,new_tesfik_primi):
+        self.__tesfik_primi = new_tesfik_primi
 
     def get_zam_onerisi(self):
         return self.__zam_onerisi
+    def se__zam_onerisi(self,ne__zam_onerisi):
+        self.__zam_onerisi = ne__zam_onerisi
 
     def get_yeni_maas(self):
         self.__yeni_maas = self.get_maas() + self.zam_hakki()
