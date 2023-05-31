@@ -9,12 +9,24 @@ class Calisan(Insan):
         self.__yeni_maas=0
     def get_statu(self):
         return self.__statu
+    def set_statu(self, new_statu):
+        self.__statu = new_statu
+
     def get_tecrube(self):
         return self.__tecrube
+    def set_tecrube(self,new_tecrube):
+        self.__tecrube=new_tecrube
+
     def get_maas(self):
         return self.__maas
+    def set_maas(self,new_maas):
+        self.__maas=new_maas
+
     def get_zam_orani(self):
         return self.__zam_orani
+    def set_zam_orani(self,new_zam_orani):
+        self.__zam_orani=new_zam_orani
+
 
     def zam_hakki(self):
         if((self.get_tecrube() / 12)<2):
