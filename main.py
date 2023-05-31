@@ -102,3 +102,69 @@ veri={
 }
 df=pd.DataFrame(veri)
 df.to_excel("output.xlsx")
+
+a=pd.read_excel('output.xlsx')
+a=a.set_index('Number')  # a= bu dataframin baştaki indisini Number olarak güncelledik
+print("Dataframe:")
+print(a)
+print("\n")
+
+b=a['Maaş']>15000  # b= maaşı 15binden büyük olanlar
+print("Maaşı 15binden fazla olan kişi sayısı :")
+print(len(a[b]))
+print("\n")
+
+
+calisanlar= a['Statü']=="çalışan" #  çalışanlar
+calisanlar_df=(a[calisanlar]) # calisanlar_df # = çalışanların listelendiği dataframe
+
+toplam_maas_calisanlar= calisanlar_df['Maaş'].sum()  # çalışanların maaşlarının toplamı
+ortalama_maas_calisanlar= toplam_maas_calisanlar / len(calisanlar_df)
+
+
+mavi_yakalilar=a['Statü']=="mavi yakalı" # mavi yakalılar
+mavi_yakalilar_df=(a[mavi_yakalilar]) # mavi_yakalılar_df= mavi yakalıların listelendiği dataframe
+
+toplam_maas_maviyakalilar= mavi_yakalilar_df["Maaş"].sum() # mavi yakalıların maaşları toplamı
+ortalama_maas_maviykalilar= toplam_maas_maviyakalilar / len(mavi_yakalilar_df)
+
+
+beyaz_yakalilar=a['Statü']=="beyaz yakalı" # beyaz yakalılar
+beyaz_yakalilar_df=(a[beyaz_yakalilar]) # beyaz_yakalılar_df= beyaz yakalıların listelendiği dataframe
+
+toplam_maas_beyazyakalilar= beyaz_yakalilar_df["Maaş"].sum() # beyaz yakalıların maaşları toplamı
+ortalama_maas_beyazyakalilar= toplam_maas_beyazyakalilar / len(beyaz_yakalilar_df)
+
+
+print("Çalışanların ortalama maaşı:")
+print(ortalama_maas_calisanlar)
+
+print("Mavi Yakalıların ortalama maaşı:")
+print(ortalama_maas_maviykalilar)
+
+
+print("Beyaz Yakalıların ortalama maaşı:")
+print(ortalama_maas_beyazyakalilar)
+print("\n")
+
+print("Yeni Maaşa göre dataframe sıralaması")
+print(a.sort_values('Yeni Maaş'))
+print("\n")
+
+x=beyaz_yakalilar_df['Tecrübe']>3 # beyaz yakalılar dataframeindeki tecrübe değeri 3 ten büyük olanlar = x
+print("3 Yıldan fazla tecrübesi olan beyaz yakalılar:")
+print(beyaz_yakalilar_df[x]) # beyaz yakalılar dataframindeki xleri yazdırır
+print("\n")
+
+
+print("Yeni maaşı 10000 TL üzerinde olanlar (2-5 satır için):")
+y=a['Yeni Maaş']>10000
+xx=a[y]
+xxx=(xx[["TC No" , "Yeni Maaş"]])
+print(xxx.iloc[2:5])
+print("\n")
+
+assym=a[["Ad","Soyad","Sektör","Yeni Maaş"]]
+new_df=pd.DataFrame(assym)
+print("yeni dataframe:")
+print(new_df)
