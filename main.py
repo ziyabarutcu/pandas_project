@@ -37,3 +37,48 @@ def kullanici_bilgisi():
 
     maas = int(input("Maaşınızı Girin :"))
     print(maas)
+
+print("Çalışanlar....")
+
+kullanici_bilgisi()
+i6=Calisan("548613", "isim6", "soyad6", "46", "erkek", "Kanadalı", statu, tecrube, maas)
+i6.__str__()
+
+kullanici_bilgisi()
+i7=Calisan("100200", "isim7", "soyad7", "66", "Kadın", "Hintli", statu, tecrube, maas)
+i7.__str__()
+
+kullanici_bilgisi()
+i8=Calisan("454200", "isim8", "soyad8", "29", "Kadın", "Alman", statu, tecrube, maas)
+i8.__str__()
+
+
+
+print("Mavi Yakalılar....")
+
+kullanici_bilgisi()
+i9=MaviYaka("455550","isim9","soyad9","21","erkek","Amerikalı",statu,tecrube,maas)
+i9.__str__()
+
+kullanici_bilgisi()
+i10=MaviYaka("464851","isim10","soyad10","51","erkek","Alman",statu,tecrube,maas)
+i10.__str__()
+
+kullanici_bilgisi()
+i11=MaviYaka("112456","isim11","soyad11","40","kadın","Fransız",statu,tecrube,maas)
+i11.__str__()
+
+
+print("Beyaz Yakalılar....")
+
+kullanici_bilgisi()
+i12=BeyazYaka("684865","isim12","soyad12","50","kadın","Fransız",statu,tecrube,maas)
+i12.__str__()
+
+kullanici_bilgisi()
+i13=BeyazYaka("555666","isim13","soyad13","44","kadın","Azeri",statu,tecrube,maas)
+i13.__str__()
+
+kullanici_bilgisi()
+i14=BeyazYaka("321123","isim14","soyad14","32","erkek","İspanyol",statu,tecrube,maas)
+i14.__str__()
