@@ -20,3 +20,20 @@ i4.__str__()
 
 i5=Issiz("705401","isim5","soyad5","28","kadın","Türk","beyazyaka",6,"maviyaka",2,"yonetici",1)
 i5.__str__()
+
+
+def kullanici_bilgisi():
+    global statu
+    global tecrube
+    global maas
+    statu = input("Hangi Sektorde Çalışıyorsunuz? (“teknoloji, muhasebe, inşaat, diğer) :")
+    while (statu != "teknoloji" and statu != "muhasebe" and statu != "inşaat" and statu != "diğer"):
+        print("Lütfen doğru şekilde tekrar girin...")
+        statu = input("Hangi Sektorde Çalışıyorsunuz? (“teknoloji, muhasebe, inşaat, diğer) :")
+    print(statu)
+
+    tecrube = int(input("Bu sektörde kaç ay çalıştınız? :"))
+    print(tecrube)
+
+    maas = int(input("Maaşınızı Girin :"))
+    print(maas)
