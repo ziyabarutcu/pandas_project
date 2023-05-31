@@ -86,7 +86,7 @@ kullanici_bilgisi()
 i14=BeyazYaka("321123","isim14","soyad14","32","erkek","İspanyol",statu,tecrube,maas)
 i14.__str__()
 
-"""
+
 
 veri={
     "Statü":["çalışan","çalışan","çalışan","mavi yakalı","mavi yakalı","mavi yakalı","beyaz yakalı","beyaz yakalı","beyaz yakalı"],
@@ -105,7 +105,7 @@ veri={
 }
 df=pd.DataFrame(veri)
 df.to_excel("output.xlsx")
-
+"""
 a=pd.read_excel('output.xlsx')
 a=a.set_index('Number')  # a= bu dataframin baştaki indisini Number olarak güncelledik
 print("Dataframe:")
