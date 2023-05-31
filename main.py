@@ -6,7 +6,7 @@ from BeyazYaka import BeyazYaka
 import pandas as pd
 import openpyxl
 
-"""
+
 i1=Insan("123456","isim1","soyad1","35","kadın","Türk")
 i1.__str__()
 
@@ -86,7 +86,7 @@ kullanici_bilgisi()
 i14=BeyazYaka("321123","isim14","soyad14","32","erkek","İspanyol",statu,tecrube,maas)
 i14.__str__()
 
-"""
+
 
 veri={
     "Statü":["çalışan","çalışan","çalışan","mavi yakalı","mavi yakalı","mavi yakalı","beyaz yakalı","beyaz yakalı","beyaz yakalı"],
@@ -103,10 +103,8 @@ veri={
     "Teşfik Primi":["0","0","0","0","0","0",i12.get_tesfik_primi(),i13.get_tesfik_primi(),i14.get_tesfik_primi()],
     "Yeni Maaş":[i6.get_yeni_maas(),i7.get_yeni_maas(),i8.get_yeni_maas(),i9.get_yeni_maas(),i10.get_yeni_maas(),i11.get_yeni_maas(),i12.get_yeni_maas(),i13.get_yeni_maas(),i14.get_yeni_maas()]
 }
-df=pd.DataFrame(veri)
-df.to_excel("output.xlsx")
 
-a=pd.read_excel('output.xlsx')
+a=pd.DataFrame(veri)
 a=a.set_index('Number')  # a= bu dataframin baştaki indisini Number olarak güncelledik
 print("Dataframe:")
 print(a)
